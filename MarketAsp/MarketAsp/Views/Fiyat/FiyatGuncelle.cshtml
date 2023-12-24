@@ -1,0 +1,16 @@
+﻿@model MarketAsp.Models.EntityFramework.TblUrunler
+@{
+    ViewBag.Title = "FiyatGuncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Fiyat Menü</h2>
+<form method="post" class="form-control" style="margin-top:10px">
+    <div>
+        <label>Ürün İsmi</label>
+        @Html.DropDownListFor(m => m.UrunBarkod, (List<SelectListItem>)ViewBag.urunler, new { @class = "form-control" })
+    </div>
+    
+</form>
+
+

@@ -1,0 +1,27 @@
+﻿
+@using MarketAsp.Models.EntityFramework
+@model List<TblStok>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="alert-info">Stok Menu</h2>
+<table class="table table-bordered, alert-info">
+    <tr>
+        <th>Ürün Barkodu</th>
+        <th>Ürün İsmi</th>
+        <th>Stok Adedi</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        { 
+            <tr>
+                <th>@item.UrunBarkod</th>
+                <th>@item.UrunIsim</th>
+                <th>@item.UrunStok</th>
+            </tr>
+        }
+    </tbody>
+</table>
+

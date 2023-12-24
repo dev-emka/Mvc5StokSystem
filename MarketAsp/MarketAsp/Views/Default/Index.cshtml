@@ -1,0 +1,28 @@
+﻿@using MarketAsp.Models.EntityFramework
+@model List<TblUrunler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="alert-info">Ürünler Menu</h2>
+<table class="table table-bordered, alert-info">
+    <tr>
+        <th>Ürün Barkodu</th>
+        <th>Ürün İsmi</th>
+        <th>Ürün Fiyatı</th>
+    </tr>
+    <tbody>
+        @foreach(var item in Model)
+         {
+            <tr>
+                <th>@item.UrunBarkod</th>
+                <th>@item.UrunIsim</th>
+                <th>@item.UrunFiyat TL</th>
+            </tr>
+         }
+    </tbody>
+</table>
+<a href="/Default/YeniUrun"class="btn btn-primary" >Yeni Ürün Ekleme</a>
+
